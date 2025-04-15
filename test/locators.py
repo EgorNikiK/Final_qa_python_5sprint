@@ -1,0 +1,25 @@
+from selenium.webdriver.common.by import By
+
+
+class TestLocators:
+    SEARCH_BUTTON_LOGIN_ACCOUNT = By.XPATH, ".//button[text()='Войти в аккаунт']"
+    SEARCH_BUTTON_LOGIN = By.XPATH, ".//h2[text()='Вход']"
+    SEARCH_INPUT_EMAIL = By.XPATH, ".//*[text()='Email']/following-sibling::input"
+    SEARCH_INPUT_PASSWORD = By.XPATH, ".//*[text()='Пароль']/following-sibling::input"
+    CLICK_BUTTON_LOGIN = By.XPATH, ".//button[text()='Войти']"
+    SEARCH_BUTTON_ORDER = By.XPATH, ".//button[text()='Оформить заказ']"
+    SEARCH_BUTTON_PERSONAL_ACCOUNT = By.XPATH, ".//*[text()='Личный Кабинет']"
+    CHECK_BUTTON_LOGIN = By.XPATH, ".//a[text()='Войти']"
+    SEARCH_TEXT_PROFILE = By.XPATH, ".//a[text()='Профиль']"
+    SEARCH_BUTTON_LOGOUT = By.XPATH, ".//button[text()='Выход']"
+    SEARCH_BUTTON_CONSTRUCTOR = By.XPATH, ".//p[text()='Конструктор']"
+    SEARCH_BUTTON_LOGO = By.XPATH, ".//*[contains(@class, 'AppHeader_header__logo')]"
+    SEARCH_INPUT_NAME = By.XPATH, ".//*[text()='Имя']/following-sibling::input"
+    CHECK_BUTTON_REGISTRATION = By.XPATH, ".//button[text()='Зарегистрироваться']"
+    SEARCH_ERROR_PASSWORD = By.XPATH, ".//p[text()='Некорректный пароль']"
+    SEARCH_BUTTON_FILLINGS = By.XPATH, ".//span[text()='Начинки']"
+    SEARCH_BUTTON_SAUCES = By.XPATH, ".//span[text()='Соусы']"
+    SEARCH_BUTTON_BREADS = By.XPATH, ".//span[text()='Булки']"
+    CHECK_SECTION_FILLINGS = By.XPATH, ".//h2[text()='Начинки']"
+    CHECK_SECTION_SAUCES = By.XPATH, ".//h2[text()='Соусы']"
+    CHECK_SECTION_BREADS = By.XPATH, ".//h2[text()='Булки']"
