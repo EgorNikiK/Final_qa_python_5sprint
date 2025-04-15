@@ -7,16 +7,23 @@ class TestSectionConstructor:
     def test_check_operation_fillings(self, driver):
         driver.get("https://stellarburgers.nomoreparties.site/")
         driver.find_element(*TestLocators.SEARCH_BUTTON_FILLINGS).click()
-        WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located
-                                       (TestLocators.CHECK_SECTION_FILLINGS))
+        WebDriverWait(driver, 5).until(
+            expected_conditions.text_to_be_present_in_element(
+                TestLocators.CHECK_SECTION_FILLINGS, "Начинки"
+            )
+        )
+
         check_text = driver.find_element(*TestLocators.CHECK_SECTION_FILLINGS).text
         assert check_text == "Начинки"
 
     def test_check_operation_sauces(self, driver):
         driver.get("https://stellarburgers.nomoreparties.site/")
         driver.find_element(*TestLocators.SEARCH_BUTTON_SAUCES).click()
-        WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located
-                                       (TestLocators.CHECK_SECTION_SAUCES))
+        WebDriverWait(driver, 5).until(
+            expected_conditions.text_to_be_present_in_element(
+                TestLocators.CHECK_SECTION_SAUCES, "Соусы"
+            )
+        )
         check_text = driver.find_element(*TestLocators.CHECK_SECTION_SAUCES).text
         assert check_text == "Соусы"
 
@@ -24,7 +31,10 @@ class TestSectionConstructor:
         driver.get("https://stellarburgers.nomoreparties.site/")
         driver.find_element(*TestLocators.SEARCH_BUTTON_SAUCES).click()
         driver.find_element(*TestLocators.SEARCH_BUTTON_BREADS).click()
-        WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located
-                                       (TestLocators.CHECK_SECTION_BREADS))
+        WebDriverWait(driver, 5).until(
+            expected_conditions.text_to_be_present_in_element(
+                TestLocators.CHECK_SECTION_BREADS, "Булки"
+            )
+        )
         check_text = driver.find_element(*TestLocators.CHECK_SECTION_BREADS).text
         assert check_text == "Булки"
