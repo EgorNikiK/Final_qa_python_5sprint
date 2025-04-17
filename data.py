@@ -1,0 +1,5 @@
+login_email = "egor_nikiforov_19_052@yandex.ru"
+login_password = "qwerty"
+registration_name = "Егор"
+correct_password = "qwerty"
+incorrect_password = "asdfgh"
